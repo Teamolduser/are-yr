@@ -104,7 +104,7 @@ git clone https://github.com/${usr}/${repo}.git
 
 ls
 
-rm -rf $PWD
+rm -rf are-yr
 
 ls
 
