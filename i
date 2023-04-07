@@ -86,6 +86,9 @@ else
     exit 1
 fi
 
+figlet HALF
+figlet DONE
+
 echo "enter github user name"
 read usr
 echo "enter github repo name"
