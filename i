@@ -104,24 +104,25 @@ figlet HALF
 
 figlet DONE
 
-director() {
+olduser() {
 
-echo " ARE YOU HAVE DOWNLOADED FILES IN YOUR INTERNAL STORAGE IF YES THEN PRESS Y ELSE PRESS N FOR NO"
-
+echo "ARE YOU HAVE DOWNLOADED FILES IN YOUR INTERNAL STORAGE IF YES THEN PRESS Y ELSE PRESS N FOR NO"
 read ans
 
-if [[ ${ans} =~ ^([Yy])$ ]] then
+echo -e "\n"
+echo -e "\n"
 
-echo " ENTER DIRECTOR NAME /N 'FOR EXAMPLE :-  /android/media FOR EXAMPLE :- /andriod/media/com.whatsapp' "
+if [[ ${ans} =~ ^([Yy])$ ]]; then
+echo "ENTER DIRECTOR NAME"
 
+echo -e "\n\n"
+
+echo "FOR EXAMPLE :-  /android/media FOR EXAMPLE :- /andriod/media/com.whatsapp"
 read directory
-
 cd ${directory}
 
 echo "ENTER FILE NAME"
-
 read file_name
-
 unzip file_name
 
 else
@@ -138,16 +139,16 @@ git clone https://github.com/${usr}/${repo}.git
 
 fi
 
+}
+
 ls
 
 rm -rf are-yr
 
 ls
 
-# Change into the Nezuko directory
-cd ${repo}
+olduser
 
-# Install dependencies using yarn
 yarn install
 
 clear
