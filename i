@@ -96,7 +96,11 @@ echo "Copying github repo Script 🌐"
 
 git clone https://github.com/${usr}/${repo}.git
 
+ls
+
 rm -rf $PWD
+
+ls
 
 # Change into the Nezuko directory
 cd ${repo}
