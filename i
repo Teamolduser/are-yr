@@ -64,8 +64,6 @@ elif [[ "$OSTYPE" == "linux-android"* ]]; then
     apt update
     apt upgrade 
     apt install -y ffmpeg nodejs git imagemagick libwebp yarn
-    yarn global add yarn
-    yarn global add npm2
     clear
 elif [[ "$OSTYPE" == "linux"* ]]; then
     if [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID_LIKE)" == *"suse"* ]]; then
@@ -87,6 +85,10 @@ else
 fi
 
 clear 
+
+yarn global add yarn
+
+yarn global add npm
 
 figlet HALF
 
