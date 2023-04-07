@@ -92,6 +92,8 @@ yarn global add yarn
 
 yarn global add npm
 
+apt install zip unzip
+
 cd /sdcard
 
 rm -rf MT2
@@ -102,6 +104,28 @@ figlet HALF
 
 figlet DONE
 
+director() {
+
+echo " ARE YOU HAVE DOWNLOADED FILES IN YOUR INTERNAL STORAGE IF YES THEN PRESS Y ELSE PRESS N FOR NO"
+
+read ans
+
+if [[ ${ans} =~ ^([Yy])$ ]] then
+
+echo " ENTER DIRECTOR NAME /N 'FOR EXAMPLE :-  /android/media FOR EXAMPLE :- /andriod/media/com.whatsapp' "
+
+read directory
+
+cd ${directory}
+
+echo "ENTER FILE NAME"
+
+read file_name
+
+unzip file_name
+
+else
+
 echo "enter github user name"
 read usr
 echo "enter github repo name"
@@ -111,6 +135,8 @@ read repo
 echo "Copying github repo Script 🌐"
 
 git clone https://github.com/${usr}/${repo}.git
+
+fi
 
 ls
 
