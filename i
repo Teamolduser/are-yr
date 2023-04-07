@@ -86,9 +86,17 @@ fi
 
 clear 
 
+termux-setup-storage
+
 yarn global add yarn
 
 yarn global add npm
+
+cd /sdcard
+
+rm -rf MT2
+
+mkdir MT2
 
 figlet HALF
 
