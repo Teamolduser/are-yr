@@ -86,7 +86,10 @@ else
     exit 1
 fi
 
+clear 
+
 figlet HALF
+
 figlet DONE
 
 echo "enter github user name"
